@@ -63,7 +63,7 @@ class App extends BaseConfig
 	| should run under for this request.
 	|
 	*/
-	public $defaultLocale = 'UTF-8';
+	public $defaultLocale = 'en';
 
 	/*
 	|--------------------------------------------------------------------------

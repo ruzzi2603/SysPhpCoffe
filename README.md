@@ -91,3 +91,8 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 ## Running CodeIgniter Tests
 
 Information on running the CodeIgniter test suite can be found in the [README.md](tests/README.md) file in the tests directory.
+### Usando PHP embutido
+1. Abra o terminal na raiz do projeto (`systemPhp-main`).
+2. Execute:
+ ```bash
+   php -S localhost:8000 -t public
