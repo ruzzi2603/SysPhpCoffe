@@ -24,4 +24,5 @@ class Home extends BaseController
         echo view('pages/contato');
         echo view('templates/footer');
     }
+    
 }

@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost:8080';
+	public string $baseURL = 'http://localhost:8000/';
 
 	/*
 	|--------------------------------------------------------------------------
@@ -265,5 +265,5 @@ class App extends BaseConfig
 	|   - http://www.w3.org/TR/CSP/
 	*/
 	public $CSPEnabled = false;
-
+    
 }

@@ -1,945 +1,766 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Premium — Do Produtor à Xícara</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    
-    <style>
-        /* ==========================================================================
-           RESET & VARIÁVEIS GLOBAIS (Design do Sistema — Paleta Terrosa Minimalista)
-           ========================================================================== */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy reveal">
+                <span class="pill">Cidade acolhedora do Sul de Minas</span>
+                <h1>Guaxupé, uma cidade que une <span>história, cultura e beleza urbana</span>.</h1>
+                <p class="hero-text">
+                    Este layout foi pensado para mostrar Guaxupé com elegância: ruas, arquitetura, tradição,
+                    turismo, pontos culturais e a identidade suave de uma cidade mineira que valoriza sua trajetória.
+                </p>
 
-        :root {
-            /* Cores Estilizadas e Neutras */
-            --bg-dark: #0f0c1b;         /* Fundo profundo luxuoso */
-            --bg-card: rgba(22, 19, 32, 0.45); /* Vidro translúcido escuro */
-            --border-glow: rgba(186, 151, 122, 0.15);
-            
-            /* Tons de Café e Ouro Champagne */
-            --accent-primary: #ba977a;   /* Ouro sutil / Café cru elegante */
-            --accent-bright: #e3ccb8;    /* Tom creme claro de destaque */
-            --text-main: #f5f2eb;        /* Off-white quente, confortável para leitura */
-            --text-muted: #a8a29e;       /* Cinza terroso para textos secundários */
-            
-            /* Tipografia e Efeitos */
-            --font-serif: 'Playfair Display', Georgia, serif;
-            --font-sans: 'Inter', system-ui, sans-serif;
-            --shadow-premium: 0 30px 70px rgba(0, 0, 0, 0.6);
-            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+                <div class="hero-actions">
+                    <a href="#turismo" class="btn btn-primary">Explorar atrações</a>
+                    <a href="https://www.guaxupe.mg.gov.br/" target="_blank" rel="noopener noreferrer" class="btn btn-soft">Site oficial</a>
+                </div>
 
-        html {
-            scroll-behavior: smooth;
-            font-family: var(--font-sans);
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <strong>Turismo</strong>
+                        <span>pontos históricos e culturais</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>Cultura</strong>
+                        <span>eventos, memória e tradição</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>Hospitalidade</strong>
+                        <span>cidade acolhedora e organizada</span>
+                    </div>
+                </div>
+            </div>
 
-        /* Estrutura base de cabeçalho moderno */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(15, 12, 27, 0.75);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-            padding: 20px 0;
-        }
+            <div class="hero-visual reveal">
+                <div class="hero-panel">
+                    <div class="hero-panel-overlay"></div>
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Guaxup%C3%A9%20(8165167448).jpg"
+                        alt="Vista de Guaxupé"
+                        class="hero-image"
+                    >
 
-        .nav-container {
-            width: 90%;
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+                    <div class="floating-card fc-one">
+                        <strong>Centro urbano</strong>
+                        <span>Arquitetura e vida cotidiana</span>
+                    </div>
+                    <div class="floating-card fc-two">
+                        <strong>Patrimônio</strong>
+                        <span>Memória preservada</span>
+                    </div>
+                    <div class="floating-card fc-three">
+                        <strong>Tradição mineira</strong>
+                        <span>Cultura local viva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 1.4rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            color: var(--text-main);
-            text-decoration: none;
-        }
+    <section id="sobre" class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">Sobre Guaxupé</span>
+                <h2>Uma página institucional com visual limpo, suave e moderno</h2>
+                <p>
+                    Guaxupé é apresentada aqui com foco em experiência visual, clareza de navegação e destaque para
+                    aquilo que torna a cidade especial: sua identidade mineira, sua história e seus espaços de valor cultural.
+                </p>
+            </div>
 
-        .logo span {
-            color: var(--accent-primary);
-        }
+            <div class="info-grid">
+                <article class="info-card reveal">
+                    <h3>História e identidade</h3>
+                    <p>
+                        Conte a origem da cidade, o crescimento urbano, as tradições locais e a importância de Guaxupé
+                        no contexto regional do Sul de Minas.
+                    </p>
+                </article>
 
-        .nav-menu {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
+                <article class="info-card reveal">
+                    <h3>Cidade acolhedora</h3>
+                    <p>
+                        Um design leve, com cores suaves e componentes amplos, ajuda a transmitir uma sensação de acolhimento,
+                        organização e confiança.
+                    </p>
+                </article>
 
-        .nav-menu a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            transition: var(--transition-smooth);
-        }
+                <article class="info-card reveal">
+                    <h3>Uso institucional</h3>
+                    <p>
+                        Este layout funciona bem para portal turístico, site municipal, landing page institucional ou apresentação
+                        cultural da cidade.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-        .nav-menu a:hover {
-            color: var(--accent-bright);
-        }
+    <section id="turismo" class="section alt">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">Principais pontos turísticos</span>
+                <h2>Galeria com imagens públicas e cards animados</h2>
+                <p>
+                    As imagens abaixo estão carregadas por link direto, usando arquivos públicos da Wikimedia Commons.
+                </p>
+            </div>
 
-        /* ==========================================================================
-           REGRAS DE LAYOUT & CONTAINER GLOBAL RESISTENTE
-           ========================================================================== */
-        .container {
-            width: 90%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+            <div class="tour-grid">
 
-        .section {
-            padding: 140px 0;
-            position: relative;
-        }
+<!-- CATEDRAL -->
+<a
+    href="<?= base_url('turismo/catedral') ?>"
+    class="tour-card reveal"
+>
 
-        .section.alt {
-            background: linear-gradient(180deg, rgba(22, 19, 32, 0.3) 0%, transparent 100%);
-        }
+    <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%20Guaxup%C3%A9%2001.jpg"
+        alt="Catedral de Guaxupé"
+    >
 
-        /* Elemento de Rótulo / Eyebrow */
-        .eyebrow, .section-label {
-            display: inline-flex;
-            align-items: center;
-            padding: 6px 16px;
-            border-radius: 100px;
-            background: rgba(186, 151, 122, 0.06);
-            border: 1px solid rgba(186, 151, 122, 0.18);
-            color: var(--accent-bright);
-            font-size: 0.75rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 28px;
-        }
+    <div class="tour-content">
 
-        /* Cabeçalhos de Seções Modulares */
-        .section-head {
-            max-width: 800px;
-            margin-bottom: 80px;
-        }
+        <h3>
+            Catedral de Nossa Senhora das Dores
+        </h3>
 
-        .section-head h2 {
-            font-family: var(--font-serif);
-            font-size: clamp(2.2rem, 4vw, 3.8rem);
-            font-weight: 400;
-            line-height: 1.15;
-            letter-spacing: -0.5px;
-            margin-bottom: 24px;
-        }
+        <p>
+            Um dos símbolos arquitetônicos e religiosos
+            mais marcantes da cidade.
+        </p>
 
-        .section-head p {
-            color: var(--text-muted);
-            font-size: clamp(1rem, 1.2vw, 1.15rem);
-            line-height: 1.8;
-            font-weight: 300;
-        }
+        <span class="tour-link">
+            Explorar local →
+        </span>
 
-        /* Botões Minimalistas Premium */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 36px;
-            border-radius: 4px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: var(--transition-smooth);
-            cursor: pointer;
-        }
+    </div>
 
-        .btn-primary {
-            background: var(--accent-primary);
-            color: #0f0c1b;
-            border: 1px solid var(--accent-primary);
-        }
+</a>
 
-        .btn-primary:hover {
-            background: transparent;
-            color: var(--accent-bright);
-            border-color: var(--accent-bright);
-            transform: translateY(-2px);
-        }
+<!-- PALÁCIO -->
+<a
+    href="<?= base_url('turismo/palacio-das-aguias') ?>"
+    class="tour-card reveal"
+>
 
-        .btn-ghost {
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
+    <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Pal%C3%A1cio%20das%20%C3%81guias%20-%20Guaxup%C3%A9%20Mg.jpg"
+        alt="Palácio das Águias"
+    >
 
-        .btn-ghost:hover {
-            border-color: var(--accent-primary);
-            color: var(--accent-bright);
-            transform: translateY(-2px);
-        }
+    <div class="tour-content">
 
-        /* ==========================================================================
-           HERO SECTION (Otimizada com Layout Flexível Grid e Imagens Puras)
-           ========================================================================== */
-        .hero {
-            padding: 200px 0 100px;
-            min-height: 100vh;
-            margin-top: -120px;
+        <h3>
+            Palácio das Águias
+        </h3>
 
-            display: flex;
-            align-items: center;
-        }
+        <p>
+            Patrimônio cultural importante,
+            com valor histórico para Guaxupé.
+        </p>
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 80px;
-            align-items: center;
-        }
+        <span class="tour-link">
+            Explorar local →
+        </span>
 
-        .hero-copy h1 {
-            font-family: var(--font-serif);
-            font-size: clamp(3rem, 5.5vw, 5.8rem);
-            font-weight: 400;
-            line-height: 1.05;
-            letter-spacing: -2px;
-            margin-bottom: 28px;
-        }
+    </div>
 
-        .hero-copy h1 span {
-            color: var(--accent-primary);
-            font-style: italic;
-        }
+</a>
 
-        .hero-text {
-            color: var(--text-muted);
-            font-size: clamp(1.05rem, 1.3vw, 1.25rem);
-            line-height: 1.8;
-            font-weight: 300;
-            max-width: 58ch;
-            margin-bottom: 40px;
-        }
+<!-- MARIA FUMAÇA -->
+<a
+    href="<?= base_url('turismo/maria-fumaca') ?>"
+    class="tour-card reveal"
+>
 
-        .hero-actions {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 64px;
+    <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Maria%20fuma%C3%A7a%20Mogiana%20Guaxup%C3%A9%20Mg.jpg"
+        alt="Maria Fumaça Mogiana"
+    >
+
+    <div class="tour-content">
+
+        <h3>
+            Réplica da Maria Fumaça
+        </h3>
+
+        <p>
+            Elemento que remete à memória ferroviária
+            e ao imaginário cultural mineiro.
+        </p>
+
+        <span class="tour-link">
+            Explorar local →
+        </span>
+
+    </div>
+
+</a>
+
+<!-- TEATRO -->
+<a
+    href="<?= base_url('turismo/teatro') ?>"
+    class="tour-card reveal"
+>
+
+    <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Guaxupe%20Theater.jpg"
+        alt="Teatro de Guaxupé"
+    >
+
+    <div class="tour-content">
+
+        <h3>
+            Teatro de Guaxupé
+        </h3>
+
+        <p>
+            Espaço ligado às artes,
+            eventos e vida cultural da cidade.
+        </p>
+
+        <span class="tour-link">
+            Explorar local →
+        </span>
+
+    </div>
+
+</a>
+
+</div>
+        </div>
+    </section>
+
+    <section id="cultura" class="section">
+        <div class="container culture-wrap">
+            <div class="culture-copy reveal">
+                <span class="section-tag">Cultura e experiência local</span>
+                <h2>Conteúdo rico para valorizar a cidade</h2>
+                <p>
+                    A composição visual privilegia leitura confortável, contraste adequado e identidade delicada.
+                    É ideal para destacar festas tradicionais, gastronomia, religiosidade, patrimônio e o cotidiano local.
+                </p>
+
+                <div class="check-list">
+                    <div class="check-item">Eventos culturais e festividades</div>
+                    <div class="check-item">Arquitetura e patrimônio histórico</div>
+                    <div class="check-item">Gastronomia mineira e cafés da região</div>
+                    <div class="check-item">Turismo urbano e religioso</div>
+                </div>
+            </div>
+
+            <div class="culture-panel reveal">
+                <div class="mini-card">
+                    <strong>UX limpo</strong>
+                    <span>menus claros e chamadas objetivas</span>
+                </div>
+                <div class="mini-card">
+                    <strong>UI suave</strong>
+                    <span>tons claros e profundidade leve</span>
+                </div>
+                <div class="mini-card">
+                    <strong>Responsivo</strong>
+                    <span>adaptação natural para mobile</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section alt">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">Galeria cultural</span>
+                <h2>Imagens complementares da cidade e da identidade local</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <figure class="gallery-card reveal">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tacho%20de%20Rapadura%20(3169711201).jpg" alt="Gastronomia e cultura mineira">
+                    <figcaption>Gastronomia e tradição mineira</figcaption>
+                </figure>
+
+                <figure class="gallery-card reveal">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Entremontes%20(2278902266).jpg" alt="Cena cultural de Guaxupé">
+                    <figcaption>Ambientes que traduzem o interior mineiro</figcaption>
+                </figure>
+
+                <figure class="gallery-card reveal">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pomar%20(2278081977).jpg" alt="Paisagem e cultura local">
+                    <figcaption>Paisagem, memória e tranquilidade</figcaption>
+                </figure>
+
+                <figure class="gallery-card reveal">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Brasaodeguaxupe.jpg" alt="Brasão de Guaxupé">
+                    <figcaption>Identidade visual da cidade</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container">
+            <div class="cta-box reveal">
+                <div>
+                    <span class="section-tag">Links oficiais</span>
+                    <h2>Acesse os canais institucionais de Guaxupé</h2>
+                    <p>
+                        Use esta área para direcionar moradores e visitantes para o portal oficial e para as redes sociais
+                        da prefeitura.
+                    </p>
+                </div>
+
+                <div class="cta-actions">
+                    <a href="https://www.guaxupe.mg.gov.br/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        Prefeitura de Guaxupé
+                    </a>
+                    <a href="https://www.instagram.com/prefguaxupe/" target="_blank" rel="noopener noreferrer" class="btn btn-soft">
+                        Instagram oficial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    .hero {
+        padding: 88px 0 56px;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1.04fr .96fr;
+        gap: 34px;
+        align-items: center;
+    }
+
+    .pill,
+    .section-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(143,185,216,.18);
+        border: 1px solid rgba(143,185,216,.24);
+        color: #4b6a84;
+        font-weight: 700;
+        font-size: .82rem;
+        letter-spacing: .01em;
+    }
+
+    .hero-copy h1 {
+        margin-top: 16px;
+        font-family: "DM Sans", sans-serif;
+        font-size: clamp(2.65rem, 5vw, 5.25rem);
+        line-height: .98;
+        letter-spacing: -.05em;
+        max-width: 11ch;
+    }
+
+    .hero-copy h1 span {
+        color: #5b8fb3;
+    }
+
+    .hero-text {
+        margin-top: 18px;
+        max-width: 62ch;
+        color: var(--muted);
+        line-height: 1.9;
+        font-size: 1.04rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+    .btn-soft {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        border: 1px solid rgba(32,48,67,.08);
+        background: rgba(255,255,255,.7);
+        color: var(--text);
+        font-weight: 700;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .btn-soft:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-soft);
+    }
+
+    .hero-stats {
+        margin-top: 34px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .stat-card,
+    .info-card,
+    .tour-card,
+    .mini-card,
+    .cta-box {
+        background: var(--card);
+        border: 1px solid rgba(32,48,67,.08);
+        box-shadow: var(--shadow-soft);
+        backdrop-filter: blur(16px);
+    }
+
+    .stat-card {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .stat-card strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1.15rem;
+    }
+
+    .stat-card span {
+        color: var(--muted);
+        font-size: .92rem;
+        line-height: 1.5;
+    }
+
+    .hero-visual {
+        min-height: 640px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-panel {
+        position: relative;
+        width: 100%;
+        min-height: 590px;
+        border-radius: 34px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(32,48,67,.08);
+        background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.18));
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        min-height: 590px;
+        object-fit: cover;
+        transform: scale(1.02);
+    }
+
+    .hero-panel-overlay {
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(180deg, rgba(255,255,255,.02), rgba(24,41,58,.10) 40%, rgba(24,41,58,.45) 100%);
+        z-index: 1;
+    }
+
+    .floating-card {
+        position: absolute;
+        z-index: 2;
+        padding: 14px 16px;
+        border-radius: 18px;
+        background: rgba(255,255,255,.78);
+        border: 1px solid rgba(32,48,67,.08);
+        box-shadow: 0 18px 40px rgba(44,63,83,.12);
+        backdrop-filter: blur(12px);
+        animation: float 8s ease-in-out infinite;
+    }
+
+    .floating-card strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: .94rem;
+    }
+
+    .floating-card span {
+        color: var(--muted);
+        font-size: .82rem;
+    }
+
+    .fc-one { left: 22px; top: 22px; }
+    .fc-two { left: 28px; bottom: 32px; animation-delay: -2s; }
+    .fc-three { right: 22px; bottom: 58px; animation-delay: -4s; }
+
+    .section {
+        padding: 58px 0;
+    }
+
+    .section.alt {
+        background: linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,0));
+    }
+
+    .section-head {
+        max-width: 760px;
+        margin-bottom: 26px;
+    }
+
+    .section-head h2 {
+        margin: 14px 0 14px;
+        font-family: "DM Sans", sans-serif;
+        font-size: clamp(1.75rem, 3vw, 3rem);
+        line-height: 1.06;
+        letter-spacing: -.04em;
+    }
+
+    .section-head p,
+    .info-card p,
+    .tour-content p,
+    .culture-copy p,
+    .gallery-card figcaption,
+    .mini-card span,
+    .cta-box p {
+        color: var(--muted);
+        line-height: 1.85;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .info-card {
+        padding: 26px;
+        border-radius: 24px;
+        transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .info-card:hover,
+    .tour-card:hover,
+    .gallery-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(91,143,179,.28);
+    }
+
+    .info-card h3,
+    .tour-content h3 {
+        margin-bottom: 12px;
+        font-size: 1.15rem;
+    }
+
+    .tour-grid,
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .tour-card,
+    .gallery-card {
+        overflow: hidden;
+        border-radius: 24px;
+        transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .tour-card img,
+    .gallery-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .tour-content {
+        padding: 18px 18px 20px;
+    }
+
+    .tour-content p { font-size: .96rem; }
+
+    .culture-wrap {
+        display: grid;
+        grid-template-columns: 1.05fr .95fr;
+        gap: 18px;
+        align-items: stretch;
+    }
+
+    .culture-copy,
+    .culture-panel {
+        border-radius: 28px;
+        padding: 28px;
+        background: var(--card);
+        border: 1px solid rgba(32,48,67,.08);
+        box-shadow: var(--shadow-soft);
+    }
+
+    .culture-copy h2 {
+        margin: 14px 0 14px;
+        font-family: "DM Sans", sans-serif;
+        font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+        line-height: 1.06;
+    }
+
+    .check-list {
+        margin-top: 22px;
+        display: grid;
+        gap: 12px;
+    }
+
+    .check-item {
+        position: relative;
+        padding: 14px 16px 14px 46px;
+        border-radius: 18px;
+        background: rgba(255,255,255,.65);
+        border: 1px solid rgba(32,48,67,.08);
+        font-weight: 600;
+    }
+
+    .check-item::before {
+        content: "✓";
+        position: absolute;
+        left: 16px;
+        top: 12px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #345d7b;
+        background: rgba(143,185,216,.22);
+        font-size: .82rem;
+        font-weight: 900;
+    }
+
+    .culture-panel {
+        display: grid;
+        gap: 14px;
+    }
+
+    .mini-card {
+        padding: 22px;
+        border-radius: 22px;
+    }
+
+    .mini-card strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 1.05rem;
+    }
+
+    .gallery-card figcaption {
+        padding: 14px 14px 18px;
+        font-size: .95rem;
+    }
+
+    .cta-box {
+        border-radius: 30px;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+    }
+
+    .cta-box h2 {
+        margin: 14px 0 12px;
+        font-family: "DM Sans", sans-serif;
+        font-size: clamp(1.7rem, 2.9vw, 2.8rem);
+        line-height: 1.06;
+        letter-spacing: -.04em;
+        max-width: 14ch;
+    }
+
+    .cta-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px;
+    }
+    .tour-card{
+    text-decoration:none;
+    color:inherit;
+    position:relative;
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.tour-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+        0 24px 60px rgba(40,60,90,.14);
+}
+
+.tour-link{
+    display:inline-flex;
+    margin-top:14px;
+    color:#5b8fb3;
+    font-weight:700;
+    transition:transform .25s ease;
+}
+
+.tour-card:hover .tour-link{
+    transform:translateX(4px);
+}
+    @keyframes float {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-14px); }
+    }
+
+    @media (max-width: 1080px){
+        .tour-grid,
+        .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 920px){
+        .hero-grid,
+        .culture-wrap,
+        .info-grid {
+            grid-template-columns: 1fr;
         }
 
         .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 24px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding-top: 40px;
+            grid-template-columns: 1fr;
         }
 
-        .stat-card {
-            background: transparent;
-        }
-
-        .stat-card strong {
-            display: block;
-            font-family: var(--font-serif);
-            font-size: clamp(2rem, 3vw, 3.2rem);
-            font-weight: 400;
-            color: var(--accent-bright);
-            margin-bottom: 8px;
-        }
-
-        .stat-card span {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 400;
-        }
-
-        /* Painel Visual com Glassmorphism Avançado */
         .hero-visual {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            min-height: auto;
         }
 
-        .glass-card {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 4/5;
-            min-height: 580px;
-            border-radius: 12px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.00) 100%),
-                        url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            box-shadow: var(--shadow-premium);
+        .hero-panel,
+        .hero-image {
+            min-height: 460px;
         }
 
-        .glass-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(15, 12, 27, 0.1) 0%, rgba(15, 12, 27, 0.85) 100%);
-            z-index: 1;
-        }
-
-        .coffee-circle {
-            position: absolute;
-            right: -30px;
-            top: -30px;
-            width: 260px;
-            height: 260px;
-            border-radius: 50%;
-            border: 1px solid rgba(186, 151, 122, 0.15);
-            background: radial-gradient(circle, rgba(186, 151, 122, 0.04) 0%, transparent 70%);
-            animation: floatCircle 16s ease-in-out infinite;
-            z-index: 0;
-        }
-
-        .main-card-content {
-            position: absolute;
-            left: 40px;
-            right: 40px;
-            bottom: 40px;
-            z-index: 2;
-        }
-
-        .main-card-content h3 {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 16px;
-        }
-
-        .main-card-content p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            font-weight: 300;
-        }
-
-        /* Etiquetas Flutuantes Minimalistas */
-        .floating-tag {
-            position: absolute;
-            padding: 10px 20px;
-            border-radius: 4px;
-            background: rgba(15, 12, 27, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 0.8rem;
-            letter-spacing: 0.5px;
-            backdrop-filter: blur(10px);
-            z-index: 3;
-            animation: floatTag 8s ease-in-out infinite;
-        }
-        
-
-        .tag-one { top: 40px; left: -20px; animation-delay: 0s; }
-        .tag-two { top: 160px; right: -20px; animation-delay: -2s; }
-        .tag-three { bottom: 180px; left: -30px; animation-delay: -4s; }
-
-        /* ==========================================================================
-           SEÇÕES DE CONTEÚDO (Cards, Grades de Produtos e Elementos Dinâmicos)
-           ========================================================================== */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 32px;
-        }
-
-        .info-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 8px;
-            padding: 48px;
-            transition: var(--transition-smooth);
-        }
-
-        .info-card:hover {
-            border-color: var(--border-glow);
-            transform: translateY(-8px);
-            background: rgba(22, 19, 32, 0.6);
-        }
-
-        .info-card h3 {
-            font-family: var(--font-serif);
-            font-size: 1.45rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            color: var(--accent-bright);
-        }
-
-        .info-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.75;
-            font-weight: 300;
-        }
-
-        /* Grade de Produtos Estilizada */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 24px;
-        }
-
-        .product-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 6px;
-            padding: 40px 32px;
-            position: relative;
-            transition: var(--transition-smooth);
-        }
-
-        .product-card:hover {
-            border-color: var(--border-glow);
-            transform: translateY(-6px);
-        }
-
-        .product-icon {
-            font-family: var(--font-serif);
-            font-size: 1.1rem;
-            color: var(--accent-primary);
-            margin-bottom: 32px;
-            display: block;
-            position: relative;
-        }
-
-        .product-icon::after {
-            content: "";
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 24px;
-            height: 1px;
-            background: rgba(186, 151, 122, 0.3);
-        }
-
-        .product-card h3 {
-            font-family: var(--font-sans);
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 12px;
-            letter-spacing: -0.2px;
-        }
-
-        .product-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.7;
-            font-weight: 300;
-        }
-
-        /* Seção de Qualidade e Métricas */
-        .quality-wrap {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .check-list {
-            list-style: none;
-            margin-top: 40px;
-            display: grid;
-            gap: 20px;
-        }
-
-        .check-list li {
-            padding-left: 36px;
-            position: relative;
-            font-size: 1rem;
-            font-weight: 300;
-            color: var(--text-main);
-        }
-
-        .check-list li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: var(--accent-primary);
-            font-weight: 400;
-        }
-
-        .quality-panel {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            padding: 40px;
-            display: grid;
-            gap: 20px;
-        }
-
-        .metric {
-            padding: 32px;
-            border-radius: 6px;
-            background: rgba(15, 12, 27, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.02);
-            transition: var(--transition-smooth);
-        }
-
-        .metric:hover {
-            border-color: rgba(186, 151, 122, 0.1);
-        }
-
-        .metric strong {
-            display: block;
-            font-family: var(--font-serif);
-            font-size: 2.4rem;
-            font-weight: 400;
-            color: var(--accent-bright);
-            margin-bottom: 8px;
-        }
-
-        .metric span {
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            letter-spacing: 0.5px;
-            font-weight: 300;
-        }
-
-        /* Seção de Linha do Tempo Estilizada */
-        .timeline {
-            display: grid;
-            gap: 32px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .timeline-item {
-            display: flex;
-            gap: 40px;
-            padding: 40px;
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 8px;
+        .cta-box {
+            flex-direction: column;
             align-items: flex-start;
-            transition: var(--transition-smooth);
         }
 
-        .timeline-item:hover {
-            border-color: var(--border-glow);
+        .cta-actions {
+            justify-content: flex-start;
+        }
+    }
+
+    @media (max-width: 620px){
+        .tour-grid,
+        .gallery-grid { grid-template-columns: 1fr; }
+
+        .hero {
+            padding-top: 54px;
         }
 
-        .timeline-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            margin-top: 10px;
-            background: var(--accent-primary);
-            box-shadow: 0 0 0 6px rgba(186, 151, 122, 0.15);
-            flex: 0 0 auto;
+        .hero-copy h1 {
+            max-width: 12ch;
         }
+    }
+</style>
 
-        .timeline-item h3 {
-            font-family: var(--font-serif);
-            font-size: 1.35rem;
-            font-weight: 400;
-            margin-bottom: 12px;
-            color: var(--accent-bright);
-        }
-
-        .timeline-item p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            font-weight: 300;
-        }
-
-        /* Bloco de Contato Corporativo */
-        .contact-box {
-            border-radius: 12px;
-            padding: 80px 60px;
-            background: linear-gradient(135deg, rgba(22, 19, 32, 0.7) 0%, rgba(15, 12, 27, 0.9) 100%);
-            border: 1px solid rgba(186, 151, 122, 0.12);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 60px;
-        }
-
-        .contact-box h2 {
-            font-family: var(--font-serif);
-            font-size: clamp(2rem, 3vw, 3.2rem);
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 18px;
-        }
-
-        .contact-box p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            line-height: 1.75;
-            font-weight: 300;
-            max-width: 60ch;
-        }
-
-        /* ==========================================================================
-           SISTEMA DE ANIMAÇÕES ULTRA-FLUIDAS (Intersection Observer)
-           ========================================================================== */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
-                        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-            will-change: transform, opacity;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Keyframes Nativos Refinados */
-        @keyframes floatTag {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        @keyframes floatCircle {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-15px, 10px) scale(1.05); }
-        }
-
-        /* ==========================================================================
-           RESPONSIVIDADE COMPLETA E INTELIGENTE
-           ========================================================================== */
-        @media (max-width: 1200px) {
-            .product-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 24px;
-            }
-            .info-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 992px) {
-            .section {
-                padding: 100px 0;
-            }
-            .hero-grid, .quality-wrap {
-                grid-template-columns: 1fr;
-                gap: 64px;
-            }
-            .hero {
-                padding-top: 160px;
-            }
-            .hero-visual {
-                min-height: auto;
-            }
-            .glass-card {
-                min-height: 500px;
-            }
-            .contact-box {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 48px 32px;
-                gap: 40px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .info-grid, .product-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .timeline-item {
-                flex-direction: column;
-                gap: 20px;
-                padding: 32px 24px;
-            }
-            .nav-menu {
-                display: none; 
-            }
-            .footer-grid {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .footer-copyright {
-                text-align: center;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">CAFÉ<span>PREMIUM</span></a>
-            <ul class="nav-menu">
-                <li><a href="#sobre">Origem</a></li>
-                <li><a href="#produtos">Coleções</a></li>
-                <li><a href="#qualidade">Pureza</a></li>
-                <li><a href="#estrutura">Expansão</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-copy reveal">
-                   
-                    <h1>Conectando tradição, qualidade e <span>experiência única</span>.</h1>
-                    <p class="hero-text">
-                        Uma plataforma estruturada para valorizar, apresentar e negociar micro-lotes de alta classificação. Foco em rastreabilidade cirúrgica, sustentabilidade real e conexão direta entre mestres produtores e o mercado de alta gastronomia.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="#produtos" class="btn btn-primary">Explorar Coleções</a>
-                        <a href="#sobre" class="btn btn-ghost">Nossa Philosophy</a>
-                    </div>
-
-                    <div class="hero-stats">
-                        <div class="stat-card">
-                            <strong>+1.500</strong>
-                            <span>Produtores Assistidos</span>
-                        </div>
-                        <div class="stat-card">
-                            <strong>100%</strong>
-                            <span>Origem Controlada</span>
-                        </div>
-                        <div class="stat-card">
-                            <strong>Estrita</strong>
-                            <span>Análise Sensorial</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-visual reveal">
-                    <div class="glass-card">
-                        <div class="coffee-circle"></div>
-                        <div class="floating-tag tag-one">Torra Customizada</div>
-                        <div class="floating-tag tag-two">Densidade Selecionada</div>
-                        <div class="floating-tag tag-three">SCA 85+ Points</div>
-
-                        <div class="main-card-content">
-                            <span style="color: var(--accent-primary); font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 8px;">Lote Reserva</span>
-                            <h3>Excelência Consistente em Cada Etapa</h3>
-                            <p>Do terroir impecável ao envase sob atmosfera modificada. Processos validados por juízes internacionais e uma cadeia de suprimentos totalmente transparente.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="sobre" class="section">
-            <div class="container">
-                <div class="section-head reveal">
-                    <span class="section-label">O Legado da Marca</span>
-                    <h2>Design Minimalista Para Marcas de Forte Presença Comercial</h2>
-                    <p>Esta estrutura foi projetada especificamente para cooperativas de ponta e exportadores tradicionais que demandam autoridade visual, reputação limpa e escalabilidade tecnológica.</p>
-                </div>
-
-                <div class="info-grid">
-                    <article class="info-card reveal">
-                        <h3>Terroir & Altitude</h3>
-                        <p>Apresentação detalhada da procedência geográfica, mapeamento de faces solares, altitudes médias elevadas e microclimas únicos que desenham perfis químicos complexos.</p>
-                    </article>
-
-                    <article class="info-card reveal">
-                        <h3>Relação Simbiótica</h3>
-                        <p>Valorização do homem do campo por meio de contratos de comércio justo, pacotes de assistência agronômica contínua e investimentos massivos em infraestrutura local.</p>
-                    </article>
-
-                    <article class="info-card reveal">
-                        <h3>Posicionamento</h3>
-                        <p>A estética limpa e o espaçamento generoso elevam instantaneamente o valor percebido do produto, alinhando a marca aos players mais luxuosos do mercado global.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="produtos" class="section alt">
-            <div class="container">
-                <div class="section-head reveal">
-                    <span class="section-label">Categorias</span>
-                    <h2>Linhas Estruturadas Para Atender Diferentes Demandas Comerciais</h2>
-                    <p>Um ecossistema versátil desenhado para se adequar a catálogos de sacas verdes (commodity premium), grãos torrados comerciais, cápsulas tecnológicas ou lotes de leilão.</p>
-                </div>
-
-                <div class="product-grid">
-                    <article class="product-card reveal">
-                        <span class="product-icon">01</span>
-                        <h3>Classificação Tradicional</h3>
-                        <p>Perfil de torra equilibrado, doçura de caramelo acentuada e aceitação em massa no ambiente corporativo.</p>
-                    </article>
-
-                    <article class="product-card reveal">
-                        <span class="product-icon">02</span>
-                        <h3>Micro-Lotes Especiais</h3>
-                        <p>Notas sensoriais complexas (florais e frutadas), acidez fosfórica brilhante e rastreabilidade total da fazenda.</p>
-                    </article>
-
-                    <article class="product-card reveal">
-                        <span class="product-icon">03</span>
-                        <h3>Blends Corporativos</h3>
-                        <p>Combinação exata de grãos de diferentes regiões para garantir consistência extrema e sabor exclusivo o ano todo.</p>
-                    </article>
-
-                    <article class="product-card reveal">
-                        <span class="product-icon">04</span>
-                        <h3>Lotes de Exportação</h3>
-                        <p>Preparação rigorosa de padrão internacional (Afonso, NY2/3), pronto para embarques e trâmites portuários céleres.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="qualidade" class="section">
-            <div class="container quality-wrap">
-                <div class="quality-copy reveal">
-                    <span class="section-label">Rigor Analítico</span>
-                    <h2>Controle Científico para Manter a Confiança Mercadológica</h2>
-                    <p>Interfaces corporativas exigem precisão. Demonstre de forma clara os seus pilares técnicos de controle: análises físicas via inteligência artificial, curvas de torra computadorizadas e certificações internacionais.</p>
-
-                    <ul class="check-list">
-                        <li>Varredura óptica eletrônica de defeitos físicos</li>
-                        <li>Rastreamento térmico via software Cropster em tempo real</li>
-                        <li>Homologação de práticas regenerativas e pegada de carbono neutra</li>
-                        <li>Análise de cup de acordo com os rigorosos protocolos mundiais SCA</li>
-                    </ul>
-                </div>
-
-                <div class="quality-panel reveal">
-                    <div class="metric">
-                        <strong>Score 85+</strong>
-                        <span>Pontuação mínima aceita para nossa linha de microlotes</span>
-                    </div>
-                    <div class="metric">
-                        <strong>24/7</strong>
-                        <span>Monitoramento e suporte logístico para importadores</span>
-                    </div>
-                    <div class="metric">
-                        <strong>ISO 22000</strong>
-                        <span>Alinhado às diretrizes globais de segurança alimentar</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="estrutura" class="section alt">
-            <div class="container">
-                <div class="section-head reveal">
-                    <span class="section-label">Arquitetura de Expansão</span>
-                    <h2>Um Ecossistema Pronto para o Crescimento Digital</h2>
-                    <p>Diferente de landing pages comuns, esta estrutura de código modular foi projetada pensando nas próximas integrações de canais de venda complexos da empresa.</p>
-                </div>
-
-                <div class="timeline">
-                    <div class="timeline-item reveal">
-                        <span class="timeline-dot"></span>
-                        <div>
-                            <h3>Portal do Comprador Internacional</h3>
-                            <p>Ambiente seguro contendo laudos de classificação, certificados fitossanitários e tracking de contêineres marítimos.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item reveal">
-                        <span class="timeline-dot"></span>
-                        <div>
-                            <h3>Mecanismo de Cotação B2B</h3>
-                            <p>Formulários dinâmicos com atualização de precificação em tempo real indexada à Bolsa de Nova York (ICE).</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item reveal">
-                        <span class="timeline-dot"></span>
-                        <div>
-                            <h3>Canal do Cooperado / Produtor</h3>
-                            <p>Dashboard focado na transparência, permitindo o acompanhamento de entregas de café, notas de classificação e balanço financeiro.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="section">
-            <div class="container">
-                <div class="contact-box reveal">
-                    <div>
-                        <span class="section-label" style="margin-bottom: 20px;">Contato Institucional</span>
-                        <h2>Posicione Sua Operação no Topo do Mercado</h2>
-                        <p>Este layout reflete as tendências de design de estúdios europeus. Estamos prontos para escalar este front-end conectando painéis administrativos, bancos de dados relacionais e sistemas integrados (ERPs).</p>
-                    </div>
-                    <a href="mailto:negocios@cafepremium.com" class="btn btn-primary" style="white-space: nowrap;">Solicitar Acordo</a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <script>
-        // Menu Mobile (Hamburguer)
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        if (menuToggle && navLinks) {
-            menuToggle.addEventListener('click', () => {
-                const isOpen = navLinks.style.display === 'flex';
-                navLinks.style.display = isOpen ? 'none' : 'flex';
-                navLinks.style.position = isOpen ? '' : 'absolute';
-                navLinks.style.top = isOpen ? '' : '82px';
-                navLinks.style.left = isOpen ? '' : '16px';
-                navLinks.style.right = isOpen ? '' : '16px';
-                navLinks.style.flexDirection = isOpen ? '' : 'column';
-                navLinks.style.gap = isOpen ? '' : '16px';
-                navLinks.style.padding = isOpen ? '' : '18px';
-                navLinks.style.borderRadius = isOpen ? '' : '18px';
-                navLinks.style.background = isOpen ? '' : 'rgba(15, 11, 8, 0.96)';
-                navLinks.style.border = isOpen ? '' : '1px solid rgba(255,255,255,0.08)';
-                navLinks.style.boxShadow = isOpen ? '' : '0 24px 60px rgba(0,0,0,0.35)';
-            });
-        }
-        document.addEventListener("DOMContentLoaded", () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0.12
-            };
-
-            const revealCallback = (entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target); // Libera memória do navegador
-                    }
-                });
-            };
-
-            const observer = new IntersectionObserver(revealCallback, observerOptions);
-            
-            document.querySelectorAll('.reveal').forEach(element => {
-                observer.observe(element);
-            });
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
         });
-    </script>
-</body>
-</html>
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>

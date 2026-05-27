@@ -66,7 +66,16 @@ $routes->setAutoRoute(true);
 $routes->get('/home', 'Home::index');
 $routes->get('/sobre', 'Home::sobre');
 $routes->get('/contato', 'Home::contato');
+$routes->get('turismo/catedral', 'Turismo::catedral');
 
+
+$routes->get('turismo/catedral', 'Turismo::catedral');
+
+$routes->get('turismo/palacio-das-aguias', 'Turismo::palacio');
+
+$routes->get('turismo/maria-fumaca', 'Turismo::mariafumaca');
+
+$routes->get('turismo/teatro', 'Turismo::teatro');
 
 /**
  * --------------------------------------------------------------------
